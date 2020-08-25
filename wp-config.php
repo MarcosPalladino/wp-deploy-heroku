@@ -26,6 +26,21 @@ define('SENDGRID_PASSWORD', $_ENV["SENDGRID_PASSWORD"]);
 define( 'AWS_ACCESS_KEY_ID', $_ENV["AWS_ACCESS_KEY_ID"]);
 define( 'AWS_SECRET_ACCESS_KEY', $_ENV["AWS_SECRET_ACCESS_KEY"]); 
  
+define( 'AS3CF_SETTINGS', serialize( array(
+    'provider' => 'aws',
+    'access-key-id' => 'AKIAJU4PN2VKVPGZYMJQ',
+    'secret-access-key' => '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',
+) ) );
+
+* That's all, stop editing! Happy publishing. */
+
+/** Absolute path to the WordPress directory. */
+if ( !defined('ABSPATH') )
+    define('ABSPATH', dirname(__FILE__) . '/');
+
+/** Sets up WordPress vars and included files. */
+require_once(ABSPATH . 'wp-settings.php');
+ 
 // ** ClearDB settings - from Heroku Environment ** //
 $db = parse_url($_ENV["CLEARDB_DATABASE_URL"]); 
 
